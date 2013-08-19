@@ -1,5 +1,9 @@
 web1: #component type & number
-  name: wp #component settings
+  name: hila #component settings
+  php_extensions:
+    - mysql
+    - exif
+    - gd
   shared_writable_dirs:
     - wp-content/uploads
 db1:

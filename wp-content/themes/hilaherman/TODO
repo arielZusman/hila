@@ -1,0 +1,23 @@
+:hila herman
+ ✔ remove [gallery] shortcode from post content @done (13-08-14 01:31)
+ ☐ format project-info when there is no date need to remove the line
+ ✔ when there is no featured image put place holder so text dosent move @done (13-08-14 01:31)
+ ✔ fix bug sperator line @done (13-08-14 01:31)
+ ☐ when there are no images remove counter
+ ☐ project thumbs scrolling @rafctor
+ ✔ when project is open and we click on another thumb fade out the first one and fadein the new one @done (13-08-14 01:31)
+ ✔ fix body width @done (13-08-14 01:31)
+ ☐ url for open project
+ ☐ ajax content for google
+ ☐ wp cache
+ ✔ gallery image order @done (13-08-14 01:31)
+ ✔ cursour pointer @done (13-08-14 01:31)
+ ✔ about page @done (13-08-14 01:31)
+ ✔ page title @done (13-08-17 00:22)
+ ☐ animation from css3 to jquery fallback
+ ☐ image preloading for gallery
+ : browser 
+   ☐ project thumbs   @chrome 
+   ☐ nav menu         @chrome
+   ☐ project          @chrome
+

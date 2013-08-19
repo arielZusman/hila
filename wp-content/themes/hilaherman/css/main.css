@@ -1,0 +1,783 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #000;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ----- Custom Fonts ----- */
+    
+    /* first for IE 4–8 */
+    @font-face {
+      font-family: AmmanSansWeb;
+      src: url("fonts/AmmanSansWeb.eot");
+    }
+
+    /* then for WOFF-capable browsers */
+    @font-face {
+      font-family: AmmanSansWeb;
+      src: url("fonts/AmmanSansWeb.woff") format("woff");      
+    }
+
+    /* first for IE 4–8 */
+    @font-face {
+      font-family: AmmanSansWeb-Ita;
+      src: url("fonts/AmmanSansWeb-Ita.eot");
+    }
+
+    /* then for WOFF-capable browsers */
+    @font-face {
+      font-family: AmmanSansWeb-Ita;
+      src: url("fonts/AmmanSansWeb-Ita.woff") format("woff");
+    }
+
+    /* first for IE 4–8 */
+    @font-face {
+      font-family: AmmanSansWeb-Light;
+      src: url("fonts/AmmanSansWeb-Light.eot");
+    }
+
+    /* then for WOFF-capable browsers */
+    @font-face {
+      font-family: AmmanSansWeb-Light;
+      src: url("fonts/AmmanSansWeb-Light.woff") format("woff");
+    }
+
+    /* first for IE 4–8 */
+    @font-face {
+      font-family: AmmanSansWeb-Medi;
+      src: url("fonts/AmmanSansWeb-Medi.eot");
+    }
+
+    /* then for WOFF-capable browsers */
+    @font-face {
+      font-family: AmmanSansWeb-Medi;
+      src: url("fonts/AmmanSansWeb-Medi.woff") format("woff");
+    }
+
+/* ----- End Custom Fonts*/
+
+/* ------ preload images ----- */
+body:before {
+    content: url('../img/backgroundTile.jpg')
+            url('../img/blackSeperatorLine.png')
+            url('../img/closeProjectFromLine.png')
+            url('../img/hoverProjectLayer.png')
+            url('../img/hoverScrollLeft.png')
+            url('../img/hoverScrollRight.png')
+            url('../img/imgNavBigNext.png')
+            url('../img/imgNavBigPrevious.png')
+            url('../img/imgNavClose.png')
+            url('../img/imgNavNext.png')
+            url('../img/imgNavNextHover.png')
+            url('../img/imgNavPrevious.png')
+            url('../img/imgNavPreviousHover.png')
+            url('../img/one_px_bg.png')
+            url('../img/ThumbFrame.png');
+    display: none;
+}
+body { 
+  font-family: AmmanSansWeb, sans-serif;  
+  font-weight: normal;
+  /*width: 2700px; */
+  min-height: 100%;
+  letter-spacing: 0;
+  background: url('../img/backgroundTile.jpg') 8px 8px;    
+}
+p {
+    margin: 0;
+}
+.main-wrapper {
+    /*position: relative;*/
+    
+    float: left;
+    margin-left: -875px; 
+}
+
+
+/* ----- Nav ----- */
+    .link {
+        text-decoration: none;
+        color: #000;
+    }
+    .nav-main {
+        width: 188px;
+        height: 713px;                
+        padding-top: 50px;        
+        padding-left: 53px;
+        font-family: AmmanSansWeb-Ita, sans-serif;               
+        background: url('../img/backgroundTile.jpg');               
+        float: left;
+        position: relative;
+        z-index: 10;
+        }
+            .menu{
+                font-size: 22px;                                
+                letter-spacing: -1px;
+                line-height: 27px;
+                margin-left: -2px;
+                display: block;
+                margin-top: 41px;
+                margin-bottom: 0;
+                padding: 0;                
+                list-style: none;                
+            }
+                /* .menu-item, .current-menu-item are generated by wordpress */
+                .menu-item {
+                    text-transform: capitalize;
+                    opacity: 0.85;
+                    filter: alpha(opacity=85);
+                }
+                    .menu-item:hover {
+                        opacity: 1;
+                        filter: alpha(opacity=100);
+                    }
+                .current-menu-item {
+                    opacity: 1;
+                    filter: alpha(opacity=100);
+                }
+            .menu-about {
+                display: block;
+                font-size: 22px;                                
+                letter-spacing: -1px;
+                /*line-height: 27px;*/
+                margin-left: -2px;
+                margin-top: 21px;                
+                opacity: 0.85;
+                filter: alpha(opacity=85);
+            }
+                .menu-about:hover {
+                    opacity: 1;
+                    filter: alpha(opacity=100);   
+                }
+            .menu-seprator {
+                display: block;
+                width: 15px; 
+                height: 2px;
+                margin-top: 19px;
+                background-color: #000;
+            }                            
+            .contact-info {
+                font-size: 18px;
+                font-style: normal;
+                line-height: 22px;                
+                margin-left: -2px;
+                /*opacity: 0.85;
+                filter: alpha(opacity=85);*/
+                width: 100%;
+                position: absolute;
+                top: 693px;                         
+            }
+                .email {
+                    letter-spacing: -1px;
+                }
+                .tel {
+                    letter-spacing: 0;
+                }
+
+/* ----- End Nav -----*/
+
+/* ---- Open Project ----- */
+
+    .project-wrapper {
+    width: 820px;        
+    margin-top: 50px;
+    float: left;  
+    position: relative;  
+    /*    opacity: 0;
+    filter: alpha(opacity=0);*/
+    }
+    .project-header {
+        font-family: AmmanSansWeb-Medi, sans-serif;
+        float: left;        
+        margin-left: 4px;
+        margin-top: 33px;
+        }
+        .project-title {
+            font-size: 21px;
+            line-height: 21px;
+            font-weight: normal;        
+            margin: 0; /* reset normalize css */            
+            }
+        .project-info {
+            font-size: 16px;
+            line-height: 16px;
+            font-weight: normal;
+            margin-top: 8px;   
+            font-family: AmmanSansWeb, sans-serif;     
+            }
+            .project-date:after {
+                content: ' | ';
+                color: #bab7b3;
+                margin-left: 3px;
+                margin-right: 3px;
+            }
+            .project-info .tagList {
+                display: inline;
+                margin-left: 0;
+            }   
+            
+    .project-content{
+        font-family: AmmanSansWeb-Light, sans-serif;
+        font-size: 20px; /* was 22px */
+        line-height: 27px; /* was 28px */
+        float: left;
+        width: 770px;
+        margin-left: 4px;
+        margin-top: 26px; /* was 25px */
+        /*overflow: hidden;*/
+    }
+        .only-text {
+            margin-top: 0;
+        }
+            
+    .slider {
+        float: left;
+        /*position: relative;*/
+        width: 770px;
+        height: 480px;
+        overflow: hidden;
+    }
+        .slider img {
+            display: none;
+            position: absolute;
+        }
+        .slider img:first-child {
+            display: block;
+        }
+        .previous-image, .next-image {
+            display: block;
+            position: absolute;
+            height: 480px;
+            width: 70px;            
+            z-index: 10;
+            opacity: 1;
+            background-image: url('../img/one_px_bg.png');
+            cursor: pointer;
+            }
+            .previous-image {
+                top: 0;
+                left: 0;                
+                }
+                .previous-image:hover {
+                    background: url('../img/imgNavBigPrevious.png') no-repeat center;
+                }
+            .next-image {
+                top: 0;
+                left: 700px;                
+                }
+                .next-image:hover {
+                    background: url('../img/imgNavBigNext.png') no-repeat center;   
+                }
+    .wrap-project-close {
+        width: 40px;
+        height: 480px;
+        float: right;        
+    }
+        .wrap-project-close span {
+            display: none;
+            width: 17px;
+            height: 24px;
+            position: relative;
+            top: 344px;
+            left: 16px;            
+            background: url('../img/closeProjectFromLine.png') no-repeat center;
+            cursor: pointer;
+        }
+        .wrap-project-close:hover span {
+            display: block;
+        }
+    .slider-nav {
+        float: right;
+        margin-right: 54px;
+        margin-top: 40px;
+    }
+    .slider-nav>span {
+        display: block;        
+        float: left;
+        }
+        .counter {
+            font-size: 18px;
+            line-height: 28px;
+            color: #6a655e;
+            float: left;
+            }
+        .previous {
+            background: url('../img/imgNavPrevious.png') no-repeat center;
+            width: 28px;
+            height: 28px;
+            margin-left: 16px;
+            cursor: pointer;
+            -webkit-transition: background 250ms;
+            -moz-transition: background 250ms;
+            -ms-transition: background 250ms;
+            -o-transition: background 250ms;
+            transition: background 250ms;
+            -webkit-transition-timing-function: ease-out;
+            -moz-transition-timing-function: ease-out;
+            -ms-transition-timing-function: ease-out;
+            -o-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+            }
+            .previous:hover {
+                background: url('../img/imgNavPreviousHover.png') no-repeat center;
+            }
+        .next {            
+            background: url('../img/imgNavNext.png') no-repeat center;
+            width: 28px;
+            height: 28px;
+            margin-left: 2px;
+            cursor: pointer;
+            -webkit-transition: background 250ms;
+            -moz-transition: background 250ms;
+            -ms-transition: background 250ms;
+            -o-transition: background 250ms;
+            transition: background 250ms;
+            -webkit-transition-timing-function: ease-out;
+            -moz-transition-timing-function: ease-out;
+            -ms-transition-timing-function: ease-out;
+            -o-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+            }
+            .next:hover {
+                background: url('../img/imgNavNextHover.png') no-repeat center;;   
+            }
+        .project-close{            
+            background: url('../img/imgNavClose.png') no-repeat center;
+            height: 28px;
+            width: 13px;
+            margin-left: 16px;
+            opacity: 0.85;
+            filter: alpha(opacity=85);
+            cursor: pointer;            
+            }
+            .project-close:hover {
+                opacity: 1;
+                filter: alpha(opacity=100);
+            }
+
+/* ---- End Open Project ----- */
+
+/* ----- Thumbs -----*/
+
+    .thumbs-nav {
+        position: absolute;
+        top: 50px;
+        width: 50px;
+        height: 713px;
+        border: 1px red solid;
+        z-index: 100;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        display: none;
+        background-image: url('../img/one_px_bg.png');
+
+    }
+        .left span {
+            /*display: none;*/
+            position: relative;
+            background-image: url('../img/hoverScrollLeft.png');            
+            width: 45px;
+            height: 64px;
+            top: 324px;
+        }
+            .left:hover span {
+                display: block;                
+                opacity: 0.85;
+                filter: alpha(opacity=85);
+            }
+            .left span:hover {
+                opacity: 1;
+                filter: alpha(opacity=100);
+            }
+        
+        .right span {
+            /*display: none;*/
+            position: relative;
+            background-image: url('../img/hoverScrollRight.png');            
+            width: 45px;
+            height: 64px;
+            top: 324px;
+        }
+            .right:hover span {
+                display: block;                
+                opacity: 0.85;
+                filter: alpha(opacity=85);
+            }
+            .right span:hover {
+                opacity: 1;
+                filter: alpha(opacity=100);
+            }
+    .big-sperator {
+        float: left;     
+        z-index: 20;
+        margin-top: -10px;
+        visibility: hidden;
+    }
+
+    .thumbs-wrapper {        
+            float: left;
+            margin-top: 50px;
+            /*margin-left: -55px;*/
+            white-space: nowrap;
+            /*position: relative;*/
+            }
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+            
+            .col, [class|=col] {
+                margin-left: 9px;            
+                display: inline-block;
+                *display: inline;
+                *zoom: 1;
+                vertical-align: top;                 
+            }
+                .first, .col-1 {
+                    margin-left: 43px;
+                }
+                .thumbFrame {
+                    background-image: url('../img/ThumbFrame.png');
+                    background-repeat: no-repeat;
+                    width: 253px;
+                    height: 224px;                
+                    margin-bottom: 10px;  
+                    zoom: 1;
+                    filter: alpha(opacity=100);
+                    opacity: 1;           
+                }
+                    .thumbImg {
+                        position: relative;
+                        margin-left: 8px;
+                    }
+                    .hoverProjectLayer {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: none;
+                    }
+                    .thumbImg:hover .hoverProjectLayer {
+                        display: block;
+                    }        
+                    .post {
+                        text-align: left;
+                        margin-left: 23px;
+                        margin-top: 12px;                
+                    }
+                        .thumb-title{
+                            font-size: 17px;
+                            font-weight: normal;
+                            width: 210px;
+                            overflow: hidden;  
+                        }
+
+                        .tagList {
+                            /*margin: 0;*/
+                            padding: 0;
+                            /*margin-left: 23px;*/
+                            margin-top: -4px;                        
+                            font-size: 15px;
+                            color: #d7a34a;
+                        }
+                            .tagList a {
+                                color: #d7a34a;
+                            }
+                            .tagList a:hover {
+                                color: #c78004;
+                            }
+                            
+/* ----- End Thumbs -----*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
